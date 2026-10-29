@@ -1,0 +1,29 @@
+{
+  "name": "fridge-chef",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Turn what's in your fridge into an interactive, cookable recipe.",
+  "scripts": {
+    "start": "concurrently -k -n api,web -c blue,green \"node server/dev.js\" \"vite\"",
+    "dev": "npm start",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "vite": "^8.3.5"
+  }
+}
